@@ -17,7 +17,7 @@ export class DatasComponent implements OnInit {
   }
 
   requestInput(){
-    var url="http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key="+ this.keywords +"&bk_length=600"
+    var url="http://127.0.0.1:3000/123"
     this.http.get(url).subscribe(function(data){
       console.log(data)
     },function(error){
@@ -27,9 +27,9 @@ export class DatasComponent implements OnInit {
   }
 
   request(){
-    var url="http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key="+ this.keywords +"&bk_length=600"
+    var url="http://127.0.0.1:3000/123"
     this.http.get(url).subscribe(function(data){
-      console.log(data)
+      console.log(JSON.parse(data._body))
     },function(error){
       console.log('请求失败'+ error)
     })
