@@ -1,0 +1,17 @@
+<h1>这是一个home组件</h1>
+<div>{{ msg }}</div>
+<button (click)='getMsg()'>alert按钮</button>
+<hr>
+<p>{{ name }}</p>
+<button (click)="setName()">触发改变名字函数</button>
+<hr>
+<button (click)="flag=!flag">改变flag的值引起变化</button>
+<div *ngIf="flag">这个div是</div>
+<hr>
+<input type="text" (keyup)="keyupFn($event)">
+<hr>
+<br>
+<!-- 双向数据绑定需要自行引入FormsModule -->
+<div>{{ inputData }}</div>
+<input type="text" [(ngModel)]="inputData">
+<button (click)="getInput()">获取input的值</button>

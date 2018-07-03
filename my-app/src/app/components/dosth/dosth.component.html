@@ -1,0 +1,22 @@
+<div class="input-box">
+  <input type="text" placeholder="输入完按回车键" (keyup)="marksth($event)" [(ngModel)]="todo">
+</div>
+
+<div>
+  <h3>待办事情</h3>
+  <ul>
+    <li *ngFor="let sth of list;let i=index" [hidden]="sth.status==2">
+      <button (click)="change(i,2)">改变状态status={{ sth.status }}</button>{{ sth.todo }}
+      <button (click)="del(i)">删除</button>
+    </li>
+  </ul>
+</div>
+<div>
+  <h3>已完成</h3>
+  <ul>
+    <li *ngFor="let sth of list;let i=index" [hidden]="sth.status==1">
+        <button (click)="change(i,1)">改变状态status={{ sth.status }}</button>{{ sth.todo }}
+        <button (click)="del(i)">删除</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,6 @@
+<app-header-com [msgcom]="msg" [run]="run" [getChildData]="getChildData" (outer)="outputParent()" #header></app-header-com>
+
+<p>这是news页面 {{msg}}</p>
+<button (click)="run()">执行news的run方法</button>
+<button (click)="header.child()">父组件执行子组件的按钮</button>
+<button (click)="getChildfun()">父组件执行子组件的按钮(viewchild方法)</button>

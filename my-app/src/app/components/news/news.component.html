@@ -1,0 +1,36 @@
+<h2>这是一个news组件</h2>
+{{student}}
+
+<div [innerHTML]='a'></div>
+<div>{{ a }}</div>
+
+<!-- 循环输出数据 -->
+<ul>
+    <li *ngFor="let news of arr">{{ news }}</li>
+</ul>
+<br>
+<br>
+<br>
+<ul>
+    <li *ngFor="let subject of arr2;let i=index">第{{ i+1 }}个是:{{ subject }}</li>
+</ul>
+<br><br><br>
+<ul>
+    <li *ngFor="let value of arr3;let i=index">第{{ i+1 }}个是:{{ value.title }}</li>
+</ul>
+<br><br><br>
+<ul>
+    <li *ngFor="let car of arr4;let i=index">第{{ i+1 }}个是:{{ car.carname }}
+        <ul>
+            <li *ngFor="let series of car.list;let i=index">
+                第{{ i+1 }}个型号是{{ series.title }}
+            </li>
+        </ul>
+    </li>
+</ul>
+<br><br><br>
+<!-- 这个报错 不知道为啥 -->
+<!-- <ul>
+    <li template="ngFor let cc of arr4">{{ cc.carname }}</li>
+</ul> -->
+

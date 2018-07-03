@@ -1,0 +1,9 @@
+.input-box{
+    background-color: #999999;
+    text-align:center;
+    padding: 20px;
+}
+.input-box inpu{
+    height: 50px;
+    width: 300px;
+}
