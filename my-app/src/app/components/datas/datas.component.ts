@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http,Jsonp } from '@angular/http'
+import { Http, Jsonp } from '@angular/http';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class DatasComponent implements OnInit {
   }
 
   requestInput(){
-    var url="http://127.0.0.1:3000/123"
+    var url="http://127.0.0.1:3000"
     this.http.get(url).subscribe(function(data){
       console.log(data)
     },function(error){
@@ -27,9 +27,10 @@ export class DatasComponent implements OnInit {
   }
 
   request(){
-    var url="http://127.0.0.1:3000/123"
+    var url="http://127.0.0.1:3000"
     this.http.get(url).subscribe(function(data){
-      console.log(JSON.parse(data._body))
+      var arr = JSON.parse(data._body)
+      console.log(arr)
     },function(error){
       console.log('请求失败'+ error)
     })
